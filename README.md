@@ -1,18 +1,28 @@
 # csrox
 
-External Python cheats for csgo, written in python
+External Python cheats for csgo
 
-- Includes:
-    Anti-Flash(external),
-    GlowESP(internal)
+Includes:
+- Anti-Flash(external)
+- GlowESP(internal)
 
-- Features:
-VAC Undetectable
+Features:
+- VAC Undetectable
 
-## In case not working:
 
-Try out updating the offsets - https://raw.githubusercontent.com/frk1/hazedumper/master/csgo.hpp
+## Installing
 
-Raise an issue
+```bash
+git clone https://github.com/Lakshaya-wq/csrox.git
+cd csrox
+pip install -r requirements.txt # or pip3 install -r requirements.txt
+# then double click the pyw file after launching csgo
+```
 
-[Contact me](mailto:lakshaya@hackatunes.cf)  
+## Contributing
+
+Pull request with description
+
+## License
+
+MIT
