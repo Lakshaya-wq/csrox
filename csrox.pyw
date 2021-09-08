@@ -1,9 +1,8 @@
-from antiflash import OFFSETS
 from offsets import get_offsets
-OFFSETS = get_offsets()
-print(OFFSETS)
 import pymem
 import pymem.process
+
+OFFSETS = get_offsets()
 
 dwLocalPlayer = OFFSETS['dwLocalPlayer']
 m_flFlashMaxAlpha = OFFSETS['m_flFlashMaxAlpha']
