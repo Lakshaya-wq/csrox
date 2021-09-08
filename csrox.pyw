@@ -1,14 +1,19 @@
+from antiflash import OFFSETS
+from offsets import get_offsets
+OFFSETS = get_offsets()
+print(OFFSETS)
 import pymem
 import pymem.process
 
-dwLocalPlayer = (0xD8A2DC)
-m_flFlashMaxAlpha = (0xA41C)
-dwEntityList = (0x4DA31EC)
-m_iTeamNum = (0xF4)
-dwGlowObjectManager = (0x52EB678)
-m_iGlowIndex = (0xA438)
-client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
+dwLocalPlayer = OFFSETS['dwLocalPlayer']
+m_flFlashMaxAlpha = OFFSETS['m_flFlashMaxAlpha']
+dwEntityList = OFFSETS['dwEntityList']
+m_iTeamNum = OFFSETS['m_iTeamNum']
+dwGlowObjectManager = OFFSETS['dwGlowObjectManager']
+m_iGlowIndex = OFFSETS['m_iGlowIndex']
 pm = pymem.Pymem("csgo.exe")
+client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
+
 
 def main():
     while True:
